@@ -1,0 +1,78 @@
+body {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: black;
+  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+.intro {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  text-align: center;
+  color: white;
+  background-color:rgba(33, 33, 33, 0.9);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .intro {
+    height: calc(100% - 50px);
+    padding: 0;
+  }
+}
+
+
+
+/*EARTH ANIMATION*/
+#earth {
+ background-image: url('../images/earth.jpg');
+  width: 200px;
+  height: 200px;
+  /* a black shadow from left and white from right */
+  box-shadow: inset 16px 0 40px 3px rgba(0,0,0,0.9),
+    inset -3px 0 5px 2px rgba(255,255,255,0.16);
+  background-size: 380px;
+  margin: auto;
+  border-radius: 50%;
+  animation-name: rotate;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear,linear,linear;
+  z-index: 10;
+  position: absolute;
+  right: 50%;
+  top: 40%;
+}
+
+@keyframes rotate {
+  0% { background-position: 0px; }
+  100% { background-position: 380px; }
+}
+
+
+.sky {
+    background-color:rgba(33, 33, 33, 0.9);
+    color:#ffffff;
+    display:block;
+    font: 14px/1.3 Arial,sans-serif;
+    height:500px;
+    position:relative;
+    z-index:5;
+}
+
+.hand{
+  position: absolute;
+  right: 53%;
+  top: 80%;
+  height: 100px;
+}
+

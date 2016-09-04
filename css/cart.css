@@ -1,0 +1,42 @@
+body {
+  background-color: #1A284D;
+  font-family: helvetica, arial;
+  line-height: 1.6;
+  margin: 0;
+  overflow: hidden;
+}
+
+.cart-holder {
+    display:block;
+    position:absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.cart-holder #cart {
+	width: 300px;
+	position: absolute;
+	right: 50%;
+	top: 50%;
+
+}
+.product {
+	width: 70px;
+	position: absolute;
+}
+#product-1 {
+	top:0;
+	left:0;
+}
+@keyframes move1 {
+	0% { right: 50%; top: 70% }
+	15% { right: 45%; top: 60% }    
+	30% {  right: 40%; top: 50% }  
+	45% {  right: 35%; top: 40% }
+	60% {  right: 30%; top: 30% }  
+	75% {  right: 25%; top: 20% }
+	90% {  right: 20%; top: 10% }
+	100% { right: 15%; top: 0%  }
+}

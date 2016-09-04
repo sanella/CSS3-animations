@@ -1,0 +1,88 @@
+body {
+  background-color: #1A284D;
+  font-family: helvetica, arial;
+  line-height: 1.6;
+  margin: 0;
+  overflow: hidden;
+}
+.content-wrapper {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+.flying-airplane {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  animation-name: move;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  top: 85%
+  z-index: 2;
+}
+.flying-airplane img.plane {
+	width: 100%;
+	height: auto;
+	animation-name: scale;
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	z-index: 2;
+}
+img.flying-gas {
+  width: 20px;
+  height: auto;
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  animation-name: move-claud, fade-in-out;
+  animation-duration: 2s, 5s;
+  animation-delay: 4s, 4s;
+  animation-iteration-count: infinite, infinite;
+  animation-timing-function: ease-in-out, ease-in-out;
+  z-index: 0;
+  opacity: 0;
+}
+@keyframes move {
+	0% { left: 100%; top: 80% }
+	15% { top: 70% }    
+	30% { top: 80% }  
+	45% { top: 60% }
+	60% { top: 40% }  
+	75% { top: 50% }
+	90% { top: 20% }
+	100% { left: -300px; top: 30%  }
+}
+@keyframes scale {
+  0%  { transform: scale(0.4);   }
+  15% { transform: scale(0.5); animation-timing-function:  ease-in; }
+  30% { transform: scale(0.4); animation-timing-function:  ease-in;  }
+  45% { transform: scale(0.7);  animation-timing-function:  ease-in-out; }
+  60% { transform: scale(1);  animation-timing-function:  ease-in;  }  
+  75% { transform: scale(1.2);  animation-timing-function:  ease-in; }
+  90%{ transform: scale(1.4);  animation-timing-function:  ease-in; }
+  100%{ transform: scale(1.2); animation-timing-function:  ease-in;  }
+}
+@keyframes fade-in-out {
+	0% {
+	    opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes move-claud {
+  0%   {  right: 50%, bottom: 50%; }
+  100%   {  right: 0%; bottom: 25%; }   
+}

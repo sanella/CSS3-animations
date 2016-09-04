@@ -1,0 +1,34 @@
+.rainbow-holder {
+  width: 400px;
+  height: 200px;
+  background-color: black;
+  padding: 50px;
+}
+.rainbow img {
+  width: 200px;
+  height: 200px;
+  animation: speed-5 5s 1;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  animation-fill-mode: forwards
+}
+.rainbow {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+}
+
+@keyframes speed-5 {
+  from {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
